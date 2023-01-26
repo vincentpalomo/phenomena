@@ -1,8 +1,14 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { Main } from './components';
+import styles from './global.css';
 
 const App = () => {
-  return <div>Hello World</div>;
+  return (
+    <>
+      <Main />
+    </>
+  );
 };
 
 const container = document.getElementById('app');
