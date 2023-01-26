@@ -20,22 +20,32 @@ const Main = () => {
 
   return (
     <>
-      <h1 className='text-3xl font-bold underline'>Phenomena Reports!</h1>
       <div>
         {reports.map((report) => {
           return (
-            <div key={report.id}>
-              <h3>Report: {report.title}</h3>
-              <div>
-                <p>Location: {report.location}</p>
-                <p>Description: {report.description}</p>
+            <div
+              className='mx-auto max-w-2xl rounded-lg bg-white shadow mb-1'
+              key={report.id}
+            >
+              <div className='p-4'>
+                <h3 className='text-xl font-medium text-gray-900'>
+                  {report.title}
+                </h3>
+                <p className='mt-1 text-gray-500'>
+                  Location: {report.location}
+                </p>
+                <p className='mt-1 text-gray-700'>
+                  Description: {report.description}
+                </p>
               </div>
-              <div>
+              <div className='p-4'>
+                <div class="my-8 flex items-center gap-4 before:h-px before:flex-1 before:bg-gray-300  before:content-[''] after:h-px after:flex-1 after:bg-gray-300  after:content-['']">
+                  Comments
+                </div>
                 {report.comments.map((comment) => {
                   return (
-                    <div>
-                      <h3>Comments:</h3>
-                      <p>{comment.content}</p>
+                    <div key={comment.id} className='p-4'>
+                      <p className='mt-1 text-gray-700'>{comment.content}</p>
                     </div>
                   );
                 })}
