@@ -15,6 +15,7 @@ const AddComment = ({ reportId }) => {
     try {
       const addReply = await fetchAddComment(content, reportId);
       console.log(addReply);
+      history('/');
     } catch (error) {
       console.error('error at fetchAddComment', error);
     }
