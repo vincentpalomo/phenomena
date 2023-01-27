@@ -44,7 +44,7 @@ const AddReport = () => {
 
             <div className='mt-8'>
               <p className='text-2xl font-bold text-pink-600'>
-                Send us a report!
+                All reports are anonymous
               </p>
             </div>
           </div>
@@ -118,7 +118,7 @@ const AddReport = () => {
                   type='submit'
                   className='inline-flex w-full items-center justify-center rounded-lg bg-black px-5 py-3 text-white sm:w-auto'
                 >
-                  <span className='font-medium'> Send Report</span>
+                  <span className='font-medium'>Send Report</span>
 
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
