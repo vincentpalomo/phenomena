@@ -30,3 +30,31 @@ export const fetchCreateReport = async (
   const json = await res.json();
   return json;
 };
+
+// delete report
+export const fetchDeleteReport = async (password, reportId) => {
+  const res = await fetch(`${APIURL}/reports/${reportId}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      password: `${password}`,
+    }),
+  });
+  const json = await res.json();
+  return json;
+};
+
+// add comment
+export const fetchAddComment = async (content, reportId) => {
+  const res = await fetch(`${APIURL}/reports/${reportId}/comments`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      content: `${content}`,
+    }),
+  });
+};
