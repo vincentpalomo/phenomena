@@ -40,7 +40,7 @@ const Main = () => {
                   </p>
                 </div>
                 <div className='p-4'>
-                  <div class="my-8 flex items-center gap-4 before:h-px before:flex-1 before:bg-gray-300  before:content-[''] after:h-px after:flex-1 after:bg-gray-300  after:content-['']">
+                  <div className="my-8 flex items-center gap-4 before:h-px before:flex-1 before:bg-gray-300  before:content-[''] after:h-px after:flex-1 after:bg-gray-300  after:content-['']">
                     Comments
                   </div>
                   {report.comments.map((comment) => {

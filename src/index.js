@@ -1,13 +1,15 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { Main } from './components';
+import { Main, Navbar } from './components';
 import styles from './global.css';
 
 const App = () => {
   return (
     <>
       <div className='flex min-h-screen flex-col'>
-        <header className='bg-black text-white p-4'>Phenomena 👻</header>
+        <header className='bg-black text-white p-4'>
+          <Navbar />
+        </header>
         <div className='flex flex-1 flex-row'>
           <main className='flex-1 bg-black p-4'>
             <Main />
