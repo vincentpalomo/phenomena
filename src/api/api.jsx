@@ -57,4 +57,6 @@ export const fetchAddComment = async (content, reportId) => {
       content: `${content}`,
     }),
   });
+  const json = await res.json();
+  return json;
 };
