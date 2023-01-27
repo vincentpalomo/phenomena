@@ -1,68 +1,146 @@
 import React, { useState } from 'react';
+import { useNavigate, redirect } from 'react-router-dom';
+import { fetchCreateReport } from '../api/api';
 
 const AddReport = () => {
-  const [showModal, setShowModal] = useState(false);
+  const [title, setTitle] = useState('');
+  const [location, setLocation] = useState('');
+  const [description, setDescription] = useState('');
+  const [password, setPassword] = useState('');
+
+  const history = useNavigate();
+
+  const createReport = async (e) => {
+    e.preventDefault();
+    setTitle('');
+    setLocation('');
+    setDescription('');
+    setPassword('');
+
+    try {
+      const createReport = await fetchCreateReport(
+        title,
+        location,
+        description,
+        password
+      );
+      console.log(createReport);
+      history('/');
+    } catch (error) {
+      console.error('error at fetch createReport', error);
+    }
+  };
+
   return (
-    <>
-      <button
-        className='bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'
-        type='button'
-        onClick={() => setShowModal(true)}
-      >
-        Open regular modal
-      </button>
-      {showModal ? (
-        <>
-          <div className='justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none'>
-            <div className='relative w-auto my-6 mx-auto max-w-3xl'>
-              {/*content*/}
-              <div className='border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none'>
-                {/*header*/}
-                <div className='flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t'>
-                  <h3 className='text-3xl font-semibold'>Modal Title</h3>
-                  <button
-                    className='p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none'
-                    onClick={() => setShowModal(false)}
-                  >
-                    <span className='bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none'>
-                      ×
-                    </span>
-                  </button>
-                </div>
-                {/*body*/}
-                <div className='relative p-6 flex-auto'>
-                  <p className='my-4 text-slate-500 text-lg leading-relaxed'>
-                    I always felt like I could do anything. That’s the main
-                    thing people are controlled by! Thoughts- their perception
-                    of themselves! They're slowed down by their perception of
-                    themselves. If you're taught you can’t do anything, you
-                    won’t do anything. I was taught I could do everything.
-                  </p>
-                </div>
-                {/*footer*/}
-                <div className='flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b'>
-                  <button
-                    className='text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'
-                    type='button'
-                    onClick={() => setShowModal(false)}
-                  >
-                    Close
-                  </button>
-                  <button
-                    className='bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'
-                    type='button'
-                    onClick={() => setShowModal(false)}
-                  >
-                    Save Changes
-                  </button>
-                </div>
-              </div>
+    <section className='animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-[length:400%_400%] p-1 shadow-xl transition [animation-duration:_6s] hover:shadow-md'>
+      <div className='mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8'>
+        <div className='grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5'>
+          <div className='lg:col-span-2 lg:py-12'>
+            <p className='max-w-xl text-lg text-black'>
+              Submit a report detailing your personal experience or
+              investigation of a paranormal phenomenon, such as a ghost
+              sighting, unexplained event, or supernatural occurrence.
+            </p>
+
+            <div className='mt-8'>
+              <p className='text-2xl font-bold text-pink-600'>
+                Send us a report!
+              </p>
             </div>
           </div>
-          <div className='opacity-25 fixed inset-0 z-40 bg-black'></div>
-        </>
-      ) : null}
-    </>
+
+          <div className='rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12'>
+            <form onSubmit={createReport} className='space-y-4'>
+              <div>
+                <label className='sr-only' htmlFor='name'>
+                  Title
+                </label>
+                <input
+                  className='w-full rounded-lg border-gray-200 p-3 text-sm'
+                  placeholder='Title'
+                  type='text'
+                  id='name'
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+                  required
+                />
+              </div>
+
+              <div className='grid grid-cols-1 gap-4 sm:grid-cols-2'>
+                <div>
+                  <label className='sr-only' htmlFor='email'>
+                    Location
+                  </label>
+                  <input
+                    className='w-full rounded-lg border-gray-200 p-3 text-sm'
+                    placeholder='Location'
+                    type='text'
+                    id='location'
+                    value={location}
+                    onChange={(e) => setLocation(e.target.value)}
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className='sr-only' htmlFor='phone'>
+                    Password
+                  </label>
+                  <input
+                    className='w-full rounded-lg border-gray-200 p-3 text-sm'
+                    placeholder='Password'
+                    type='password'
+                    id='text'
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className='sr-only' htmlFor='message'>
+                  Message
+                </label>
+                <textarea
+                  className='w-full rounded-lg border-gray-200 p-3 text-sm'
+                  placeholder='Message'
+                  rows='8'
+                  id='message'
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                  required
+                ></textarea>
+              </div>
+
+              <div className='mt-4'>
+                <button
+                  type='submit'
+                  className='inline-flex w-full items-center justify-center rounded-lg bg-black px-5 py-3 text-white sm:w-auto'
+                >
+                  <span className='font-medium'> Send Report</span>
+
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    className='ml-3 h-5 w-5'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='currentColor'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth='2'
+                      d='M14 5l7 7m0 0l-7 7m7-7H3'
+                    />
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

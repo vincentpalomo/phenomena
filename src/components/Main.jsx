@@ -32,9 +32,7 @@ const Main = () => {
                   <h3 className='text-xl font-medium text-gray-900'>
                     {report.title}
                   </h3>
-                  <p className='mt-1 text-gray-500'>
-                    Location: {report.location}
-                  </p>
+                  <p className='mt-1 text-gray-500'>{report.location}</p>
                   <p className='mt-1 text-gray-700'>
                     Description: {report.description}
                   </p>
