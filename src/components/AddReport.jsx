@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, redirect } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { fetchCreateReport } from '../api/api';
 
 const AddReport = () => {

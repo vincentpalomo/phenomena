@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Main, Navbar, AddReport } from './components';
+import { Main, Navbar, AddReport, AddComment } from './components';
 import styles from './global.css';
 
 const App = () => {
+  const [reportId, setReportId] = useState('');
   return (
     <>
       <div className='flex min-h-screen flex-col'>
@@ -14,8 +15,12 @@ const App = () => {
         <div className='flex flex-1 flex-row'>
           <main className='flex-1 bg-black p-4'>
             <Routes>
-              <Route path='/' element={<Main />} />
+              <Route path='/' element={<Main setReportId={setReportId} />} />
               <Route path='/addreport' element={<AddReport />} />
+              <Route
+                path='/addcomment'
+                element={<AddComment reportId={reportId} />}
+              />
             </Routes>
           </main>
           <nav className='order-first w-32 bg-black p-4'></nav>

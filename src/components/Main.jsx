@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { fetchAllReports } from '../api/api';
 
-const Main = () => {
+const Main = ({ setReportId }) => {
   const [reports, setReports] = useState([]);
 
   useEffect(() => {
@@ -16,6 +17,10 @@ const Main = () => {
     } catch (error) {
       console.error('error in fetchReports', error);
     }
+  };
+
+  const getReportId = async (reportId) => {
+    setReportId(reportId);
   };
 
   return (
@@ -48,6 +53,16 @@ const Main = () => {
                       </div>
                     );
                   })}
+                </div>
+                <div className='p-4'>
+                  <Link to='/addcomment'>
+                    <button
+                      onClick={() => getReportId(report.id)}
+                      className='my-1 text-pink-500'
+                    >
+                      Reply to thread
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
