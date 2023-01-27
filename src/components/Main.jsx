@@ -24,10 +24,10 @@ const Main = () => {
         {reports.map((report) => {
           return (
             <div
-              className='animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-[length:400%_400%] p-0.5 shadow-xl transition [animation-duration:_6s] hover:shadow-md mb-2'
+              className='animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-[length:400%_400%] p-1 shadow-xl transition [animation-duration:_6s] hover:shadow-md mb-2'
               key={report.id}
             >
-              <div className='rounded-[10px] bg-white p-4 !pt-20 sm:p-6'>
+              <div className='rounded-[10px] bg-white p-4 sm:p-4'>
                 <div className='p-4'>
                   <h3 className='text-xl font-medium text-gray-900'>
                     {report.title}
