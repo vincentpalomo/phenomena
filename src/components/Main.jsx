@@ -29,7 +29,7 @@ const Main = ({ setReportId }) => {
         {reports.map((report) => {
           return (
             <div key={report.id}>
-              {report.isExpired && (
+              {!report.isExpired && (
                 <div className='animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-[length:400%_400%] p-1 shadow-xl transition [animation-duration:_6s] hover:shadow-md mb-2'>
                   <div className='rounded-[10px] bg-white p-4 sm:p-4'>
                     <div className='p-4'>
