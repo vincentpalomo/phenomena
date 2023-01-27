@@ -33,7 +33,7 @@ const AddReport = () => {
 
   return (
     <section className='animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-[length:400%_400%] p-1 shadow-xl transition [animation-duration:_6s] hover:shadow-md'>
-      <div className='mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8'>
+      <div className='max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8'>
         <div className='grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5'>
           <div className='lg:col-span-2 lg:py-12'>
             <p className='max-w-xl text-lg text-black'>
@@ -49,14 +49,14 @@ const AddReport = () => {
             </div>
           </div>
 
-          <div className='rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12'>
+          <div className='p-8 bg-white rounded-lg shadow-lg lg:col-span-3 lg:p-12'>
             <form onSubmit={createReport} className='space-y-4'>
               <div>
                 <label className='sr-only' htmlFor='name'>
                   Title
                 </label>
                 <input
-                  className='w-full rounded-lg border-gray-200 p-3 text-sm'
+                  className='w-full p-3 text-sm border-gray-200 rounded-lg'
                   placeholder='Title'
                   type='text'
                   id='name'
@@ -72,7 +72,7 @@ const AddReport = () => {
                     Location
                   </label>
                   <input
-                    className='w-full rounded-lg border-gray-200 p-3 text-sm'
+                    className='w-full p-3 text-sm border-gray-200 rounded-lg'
                     placeholder='Location'
                     type='text'
                     id='location'
@@ -87,7 +87,7 @@ const AddReport = () => {
                     Password
                   </label>
                   <input
-                    className='w-full rounded-lg border-gray-200 p-3 text-sm'
+                    className='w-full p-3 text-sm border-gray-200 rounded-lg'
                     placeholder='Password'
                     type='password'
                     id='text'
@@ -103,7 +103,7 @@ const AddReport = () => {
                   Message
                 </label>
                 <textarea
-                  className='w-full rounded-lg border-gray-200 p-3 text-sm'
+                  className='w-full p-3 text-sm border-gray-200 rounded-lg'
                   placeholder='Message'
                   rows='8'
                   id='message'
@@ -116,13 +116,13 @@ const AddReport = () => {
               <div className='mt-4'>
                 <button
                   type='submit'
-                  className='inline-flex w-full items-center justify-center rounded-lg bg-black px-5 py-3 text-white sm:w-auto'
+                  className='inline-flex items-center justify-center w-full px-5 py-3 text-white bg-black rounded-lg sm:w-auto'
                 >
                   <span className='font-medium'>Send Report</span>
 
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    className='ml-3 h-5 w-5'
+                    className='w-5 h-5 ml-3'
                     fill='none'
                     viewBox='0 0 24 24'
                     stroke='currentColor'

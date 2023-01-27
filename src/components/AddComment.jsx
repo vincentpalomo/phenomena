@@ -22,8 +22,8 @@ const AddComment = ({ reportId }) => {
   };
 
   return (
-    <div className='mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8'>
-      <div className='mx-auto max-w-lg text-center'>
+    <div className='max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8'>
+      <div className='max-w-screen-xl mx-auto text-center'>
         <h1 className='text-2xl font-bold sm:text-3xl'>
           Got an experience for yourself?
         </h1>
@@ -36,7 +36,7 @@ const AddComment = ({ reportId }) => {
 
       <form
         onSubmit={createReply}
-        className='mx-auto mt-8 mb-0 max-w-md space-y-4'
+        className='max-w-md mx-auto mt-8 mb-0 space-y-4'
       >
         <div>
           <label htmlFor='content' className='sr-only'>
@@ -46,7 +46,7 @@ const AddComment = ({ reportId }) => {
           <div className='relative'>
             <textarea
               type='text'
-              className='w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm'
+              className='w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm'
               placeholder='Enter your reply'
               value={content}
               onChange={(e) => setContent(e.target.value)}
@@ -60,7 +60,7 @@ const AddComment = ({ reportId }) => {
 
           <button
             type='submit'
-            className='ml-3 inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white'
+            className='inline-block px-5 py-3 ml-3 text-sm font-medium text-white bg-blue-500 rounded-lg'
           >
             Reply
           </button>
