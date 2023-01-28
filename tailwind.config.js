@@ -5,9 +5,14 @@ module.exports = {
     extend: {
       animation: {
         background: 'background ease infinite',
+        text: 'text ease infinite',
       },
       keyframes: {
         background: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
+        text: {
           '0%, 100%': { backgroundPosition: '0% 50%' },
           '50%': { backgroundPosition: '100% 50%' },
         },
@@ -15,4 +20,7 @@ module.exports = {
     },
   },
   plugins: [require('@tailwindcss/line-clamp'), require('daisyui')],
+  variants: {
+    backgroundColor: ['responsive', 'hover', 'focus', 'active'],
+  },
 };
