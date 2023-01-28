@@ -10,16 +10,16 @@ const NavBar = () => {
         </Link>
       </div>
       <div className='flex justify-end flex-1 mr-auto'>
-        <Link to='/reports'>
-          <span className='m-2 font-serif text-xl text-white active:text-pink-500 hover:text-pink-500 focus:text-pink-500'>
+        <Link to='/reports' className='active:text-pink-500'>
+          <button className='m-2 font-serif text-xl text-white hover:text-pink-500 focus:text-pink-500'>
             new reports
-          </span>
+          </button>
         </Link>
         {/* <span>------</span> */}
-        <Link to='/closedreports'>
-          <span className='m-2 font-serif text-xl text-white active:text-pink-500 hover:text-pink-500 focus:text-pink-500'>
+        <Link to='/closedreports' className=' active:text-pink-500'>
+          <button className='m-2 font-serif text-xl text-white hover:text-pink-500 focus:text-pink-500'>
             closed reports
-          </span>
+          </button>
         </Link>
       </div>
       <div className='flex items-center justify-end flex-1'>
