@@ -25,7 +25,7 @@ const AddReport = () => {
         password
       );
       console.log(createReport);
-      history('/');
+      history('/reports');
     } catch (error) {
       console.error('error at fetch createReport', error);
     }
