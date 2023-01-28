@@ -61,7 +61,7 @@ const Main = ({ setReportId }) => {
                           onClick={() => getReportId(report.id)}
                           className='my-1 text-pink-500'
                         >
-                          Reply to thread
+                          <span className='font-bold'>Reply to thread</span>
                         </button>
                       </Link>
                     </div>
