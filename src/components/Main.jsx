@@ -36,9 +36,8 @@ const Main = ({ setReportId }) => {
                         {report.title}
                       </h3>
                       <p className='mt-1 text-gray-500'>{report.location}</p>
-                      <p className='mt-1 text-gray-700'>
-                        Description: {report.description}
-                      </p>
+                      <p className='mt-1 text-gray-700'>{report.description}</p>
+                      <p className='mt-3'>Report ID: {report.id}</p>
                     </div>
                     <div className='p-4'>
                       <div className="my-1 flex items-center gap-4 before:h-px before:flex-1 before:bg-gray-300  before:content-[''] after:h-px after:flex-1 after:bg-gray-300  after:content-['']">
