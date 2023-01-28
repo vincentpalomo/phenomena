@@ -13,7 +13,6 @@ const Main = ({ setReportId }) => {
     try {
       const report = await fetchAllReports();
       setReports(report);
-      console.log(report);
     } catch (error) {
       console.error('error in fetchReports', error);
     }

@@ -4,7 +4,6 @@ export const APIURL = 'https://phenomena-gmx2.onrender.com/api';
 export const fetchAllReports = async () => {
   const res = await fetch(`${APIURL}/reports`);
   const json = await res.json();
-  console.log('from api', json.reports);
   return json.reports;
 };
 
