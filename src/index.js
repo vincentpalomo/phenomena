@@ -22,7 +22,7 @@ const App = () => {
           <main className='flex-1 p-4 bg-black'>
             <Routes>
               <Route
-                path='/reports'
+                path='/openreports'
                 element={<Main setReportId={setReportId} />}
               />
               <Route path='/addreport' element={<AddReport />} />

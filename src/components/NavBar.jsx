@@ -5,14 +5,14 @@ const NavBar = () => {
   return (
     <div className='flex items-center justify-between h-16 mx-auto max-w-screen-2xl sm:px-6 lg:px-8'>
       <div className='flex items-center'>
-        <Link to='/reports'>
+        <Link to='/openreports'>
           <span className='font-serif text-4xl text-white'>phenomena</span>
         </Link>
       </div>
       <div className='flex justify-end flex-1 mr-auto'>
-        <Link to='/reports' className='active:text-pink-500'>
+        <Link to='/openreports' className='active:text-pink-500'>
           <button className='m-2 font-serif text-xl text-white hover:text-pink-500 focus:text-pink-500'>
-            new reports
+            open reports
           </button>
         </Link>
         {/* <span>------</span> */}
