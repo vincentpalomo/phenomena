@@ -25,7 +25,7 @@ const AddReport = () => {
         password
       );
       console.log(createReport);
-      history('/reports');
+      history('/openreports');
     } catch (error) {
       console.error('error at fetch createReport', error);
     }
@@ -44,7 +44,7 @@ const AddReport = () => {
 
             <div className='mt-8'>
               <p className='text-2xl font-bold text-pink-600'>
-                All reports are anonymous
+                Reports are anonymous and open for 24 hours
               </p>
             </div>
           </div>
