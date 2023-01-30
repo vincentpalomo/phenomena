@@ -2,7 +2,7 @@
 
 simple frontend for phenomena project
 
-frontend netlify url: https://phenomena-vp-fsa.netlify.app/openreports
+frontend netlify url: https://phenomena-vp-fsa.netlify.app
 
 api backend render url: https://phenomena-gmx2.onrender.com/api/reports
 
