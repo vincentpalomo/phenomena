@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import {
   Main,
   Navbar,
@@ -31,6 +31,10 @@ const App = () => {
                 element={<AddComment reportId={reportId} />}
               />
               <Route path='/closedreports' element={<ExpiredReports />} />
+              <Route
+                path='*'
+                element={<Navigate to='/openreports' replace />}
+              />
             </Routes>
           </main>
           <nav className='order-first w-32 p-4 bg-black'></nav>
