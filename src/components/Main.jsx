@@ -30,12 +30,14 @@ const Main = ({ setReportId }) => {
             <div key={report.id}>
               {!report.isExpired && (
                 <div className='animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-[length:400%_400%] p-1 shadow-xl transition [animation-duration:_6s] hover:shadow-md mb-2'>
-                  <div className='rounded-[10px] bg-white p-4 sm:p-4'>
-                    <div className='p-2'>
-                      <h3 className='text-xl font-medium text-gray-900'>{report.title}</h3>
-                      <p className='mt-1 text-gray-500'>{report.location}</p>
-                      <p className='mt-1 text-gray-700'>{report.description}</p>
-                      <p className='mt-3'>Report ID: {report.id}</p>
+                  <div className='rounded-[10px] bg-black p-4 sm:p-2'>
+                    <div className='p-1 font-robotomono lowercase tracking-[4px]'>
+                      <h3 className='text-xl font-medium text-white'>{report.title}</h3>
+                      <div className='flex justify-between items-center'>
+                        <p className='text-[16px] text-gray-500'>{report.location}</p>
+                        <p className='text-xs'>Report ID: {report.id}</p>
+                      </div>
+                      <p className='mt-1 text-sm  text-gray-200'>description: {report.description}</p>
                     </div>
                     <div className='p-2'>
                       <div className="my-1 flex items-center gap-1 before:h-px before:flex-1 before:bg-gray-300  before:content-[''] after:h-px after:flex-1 after:bg-gray-300  after:content-['']">

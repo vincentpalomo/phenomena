@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+@font-face {
+  font-family: lemurmure;
+  src: url('../public/fonts/le-murmure.ttf');
+}
+
+@font-face {
+  font-family: pilowlava;
+  src: url('../public//fonts/Pilowlava-Regular.otf');
+}

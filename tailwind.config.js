@@ -17,6 +17,11 @@ module.exports = {
           '50%': { backgroundPosition: '100% 50%' },
         },
       },
+      fontFamily: {
+        lemurmure: ['lemurmure', 'sans-serif'],
+        pilowlava: ['pilowlava', 'sans-serif'],
+        robotomono: ['Roboto Mono', 'monospace'],
+      },
     },
   },
   plugins: [require('@tailwindcss/line-clamp'), require('daisyui')],
