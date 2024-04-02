@@ -37,7 +37,7 @@ const AddReport = () => {
             </p>
 
             <div className='mt-8'>
-              <p className='text-2xl font-bold text-pink-600'>Reports are anonymous and open for 24 hours</p>
+              <p className='text-2xl font-bold text-white blur-[1px]'>Reports are anonymous and open for 24 hours</p>
             </div>
           </div>
 
