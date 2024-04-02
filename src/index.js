@@ -25,11 +25,11 @@ const App = () => {
           {/* <nav className='order-first w-32 p-0 bg-black'></nav>
           <aside className='w-32 p-0 bg-black'></aside> */}
         </div>
-        <footer className='p-4 text-center bg-black'>
+        {/* <footer className='p-4 text-center bg-black'>
           <span className='font-semibold text-transparent bg-gradient-to-r bg-clip-text from-green-300 via-blue-500 to-purple-600 animate-text'>
             phenomena 2023
           </span>
-        </footer>
+        </footer> */}
       </div>
     </>
   );
