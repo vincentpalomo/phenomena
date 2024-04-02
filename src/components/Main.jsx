@@ -29,10 +29,10 @@ const Main = ({ setReportId }) => {
           return (
             <div key={report.id}>
               {!report.isExpired && (
-                <div className='animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-[length:400%_400%] p-1 shadow-xl transition [animation-duration:_6s] hover:shadow-md mb-2'>
-                  <div className='rounded-[10px] bg-black p-4 sm:p-2'>
+                <div className='animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-[length:400%_400%] p-1 shadow-xl transition [animation-duration:_6s] hover:shadow-md mb-2 h-[20vh]'>
+                  <div className='rounded-[10px] bg-black p-4 sm:p-2 h-full'>
                     {/* report body */}
-                    <div className='p-1 font-robotomono lowercase tracking-[4px]'>
+                    <div className='p-1 font-robotomono lowercase tracking-[4px] flex flex-col justify-center h-full'>
                       <h3 className='text-xl font-medium text-white'>{report.title}</h3>
                       <div className='flex justify-between items-center'>
                         <p className='text-xs text-gray-500'>{report.location}</p>
