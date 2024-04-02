@@ -18,12 +18,7 @@ const AddReport = () => {
     setPassword('');
 
     try {
-      const createReport = await fetchCreateReport(
-        title,
-        location,
-        description,
-        password
-      );
+      const createReport = await fetchCreateReport(title, location, description, password);
       console.log(createReport);
       history('/openreports');
     } catch (error) {
@@ -32,20 +27,17 @@ const AddReport = () => {
   };
 
   return (
-    <section className='animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-[length:400%_400%] p-1 shadow-xl transition [animation-duration:_6s] hover:shadow-md'>
+    <section className='animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-[length:400%_400%] p-1 shadow-xl transition [animation-duration:_6s] hover:shadow-md font-robotomono lowercase tracking-[4px]'>
       <div className='max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8'>
         <div className='grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5'>
           <div className='lg:col-span-2 lg:py-12'>
             <p className='max-w-xl text-lg text-black'>
-              Submit a report detailing your personal experience or
-              investigation of a paranormal phenomenon, such as a ghost
-              sighting, unexplained event, or supernatural occurrence.
+              Submit a report detailing your personal experience or investigation of a paranormal phenomenon, such as a ghost sighting, unexplained
+              event, or supernatural occurrence.
             </p>
 
             <div className='mt-8'>
-              <p className='text-2xl font-bold text-pink-600'>
-                Reports are anonymous and open for 24 hours
-              </p>
+              <p className='text-2xl font-bold text-pink-600'>Reports are anonymous and open for 24 hours</p>
             </div>
           </div>
 
@@ -56,7 +48,7 @@ const AddReport = () => {
                   Title
                 </label>
                 <input
-                  className='w-full p-3 text-sm border-gray-200 rounded-lg'
+                  className='w-full p-3 text-sm border-gray-200 rounded-lg font-robotomono lowercase tracking-[4px]'
                   placeholder='Title'
                   type='text'
                   id='name'
@@ -72,7 +64,7 @@ const AddReport = () => {
                     Location
                   </label>
                   <input
-                    className='w-full p-3 text-sm border-gray-200 rounded-lg'
+                    className='w-full p-3 text-sm border-gray-200 rounded-lg font-robotomono lowercase tracking-[4px]'
                     placeholder='Location'
                     type='text'
                     id='location'
@@ -87,7 +79,7 @@ const AddReport = () => {
                     Password
                   </label>
                   <input
-                    className='w-full p-3 text-sm border-gray-200 rounded-lg'
+                    className='w-full p-3 text-sm border-gray-200 rounded-lg font-robotomono lowercase tracking-[4px]'
                     placeholder='Password'
                     type='password'
                     id='text'
@@ -103,7 +95,7 @@ const AddReport = () => {
                   Message
                 </label>
                 <textarea
-                  className='w-full p-3 text-sm border-gray-200 rounded-lg'
+                  className='w-full p-3 text-sm border-gray-200 rounded-lg font-robotomono lowercase tracking-[4px]'
                   placeholder='Message'
                   rows='8'
                   id='message'
@@ -114,25 +106,11 @@ const AddReport = () => {
               </div>
 
               <div className='mt-4'>
-                <button
-                  type='submit'
-                  className='inline-flex items-center justify-center w-full px-5 py-3 text-white bg-black rounded-lg sm:w-auto'
-                >
-                  <span className='font-medium'>Send Report</span>
+                <button type='submit' className='inline-flex items-center justify-center w-full px-5 py-3 text-white bg-black rounded-lg sm:w-auto'>
+                  <span className='font-robotomono lowercase tracking-[4px]'>Send Report</span>
 
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    className='w-5 h-5 ml-3'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                    stroke='currentColor'
-                  >
-                    <path
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      strokeWidth='2'
-                      d='M14 5l7 7m0 0l-7 7m7-7H3'
-                    />
+                  <svg xmlns='http://www.w3.org/2000/svg' className='w-5 h-5 ml-3' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M14 5l7 7m0 0l-7 7m7-7H3' />
                   </svg>
                 </button>
               </div>
