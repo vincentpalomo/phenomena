@@ -21,7 +21,7 @@ const App = () => {
               <Route path="/addcomment" element={<AddComment reportId={reportId} />} />
               <Route path="/closedreports" element={<ExpiredReports setReportId={setReportId} />} />
               <Route path="*" element={<Navigate to="/openreports" replace />} />
-              <Route path="/viewpost" element={<Posts reportId={reportId} />} />
+              <Route path="/viewpost" element={<Posts reportId={reportId} setReportId={setReportId} />} />
             </Routes>
           </main>
           {/* <nav className='order-first w-32 p-0 bg-black'></nav>

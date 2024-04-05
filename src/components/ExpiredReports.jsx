@@ -44,7 +44,7 @@ const ExpiredReports = ({ setReportId }) => {
                     <div className="p-1 font-robotomono lowercase tracking-[4px] flex flex-col justify-center h-full">
                       <Link
                         to="/viewpost"
-                        className="text-xl font-medium text-white"
+                        className="text-xl font-medium text-white hover:text-green-400"
                         onClick={() => getReportId(report.id)}
                       >
                         {report.title}
