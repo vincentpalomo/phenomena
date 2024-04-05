@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchAllReports } from '../api/api';
 
-const ExpiredReports = () => {
+const ExpiredReports = ({ setReportId }) => {
   const [reports, setReports] = useState([]);
 
   useEffect(() => {
@@ -17,6 +17,10 @@ const ExpiredReports = () => {
     } catch (error) {
       console.error('error in fetchReports', error);
     }
+  };
+
+  const getReportId = async (reportId) => {
+    setReportId(reportId);
   };
 
   return (
@@ -34,19 +38,25 @@ const ExpiredReports = () => {
           return (
             <div key={report.id}>
               {report.isExpired && (
-                <div className="animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-[length:400%_400%] p-1 shadow-xl transition [animation-duration:_6s] hover:shadow-md mb-2 h-[20vh]">
+                <div className="animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-[length:400%_400%] p-1 shadow-xl transition [animation-duration:_6s] hover:shadow-md mb-2 h-[10vh]">
                   <div className="rounded-[10px] bg-black p-4 sm:p-2 h-full">
                     {/* report body */}
                     <div className="p-1 font-robotomono lowercase tracking-[4px] flex flex-col justify-center h-full">
-                      <h3 className="text-xl font-medium text-white">{report.title}</h3>
+                      <Link
+                        to="/viewpost"
+                        className="text-xl font-medium text-white"
+                        onClick={() => getReportId(report.id)}
+                      >
+                        {report.title}
+                      </Link>
                       <div className="flex justify-between items-center">
                         <p className="text-xs text-gray-500">{report.location}</p>
                         <p className="text-xs">Report ID: {report.id}</p>
                       </div>
-                      <div className="flex items-center gap-4 mt-5">
+                      {/* <div className="flex items-center gap-4 mt-5">
                         <p>description:</p>
                         <p className="mt-1 text-sm  text-gray-200">{report.description}</p>
-                      </div>
+                      </div> */}
                     </div>
                     {/* comments */}
                     {/* <div className='p-2'>

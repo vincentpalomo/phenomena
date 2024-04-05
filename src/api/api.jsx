@@ -6,14 +6,14 @@ export const fetchAllReports = async () => {
   const json = await res.json();
   return json.reports;
 };
+export const fetchReport = async (reportId) => {
+  const res = await fetch(`${APIURL}/reports/${reportId}`);
+  const json = await res.json();
+  return json;
+};
 
 // create report
-export const fetchCreateReport = async (
-  title,
-  location,
-  description,
-  password
-) => {
+export const fetchCreateReport = async (title, location, description, password) => {
   const res = await fetch(`${APIURL}/reports`, {
     method: 'POST',
     headers: {

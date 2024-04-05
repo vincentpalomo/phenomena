@@ -3,23 +3,25 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import { Main, Navbar, AddReport, AddComment, ExpiredReports } from './components';
 import './global.css';
+import Posts from './components/Posts';
 
 const App = () => {
   const [reportId, setReportId] = useState('');
   return (
     <>
-      <div className='flex flex-col min-h-screen'>
-        <header className=' text-white bg-black'>
+      <div className="flex flex-col min-h-screen">
+        <header className=" text-white bg-black">
           <Navbar />
         </header>
-        <div className='flex flex-row flex-1'>
-          <main className='flex-1 px-5 bg-black'>
+        <div className="flex flex-row flex-1">
+          <main className="flex-1 px-5 bg-black">
             <Routes>
-              <Route path='/openreports' element={<Main setReportId={setReportId} />} />
-              <Route path='/addreport' element={<AddReport />} />
-              <Route path='/addcomment' element={<AddComment reportId={reportId} />} />
-              <Route path='/closedreports' element={<ExpiredReports />} />
-              <Route path='*' element={<Navigate to='/openreports' replace />} />
+              <Route path="/openreports" element={<Main setReportId={setReportId} />} />
+              <Route path="/addreport" element={<AddReport />} />
+              <Route path="/addcomment" element={<AddComment reportId={reportId} />} />
+              <Route path="/closedreports" element={<ExpiredReports setReportId={setReportId} />} />
+              <Route path="*" element={<Navigate to="/openreports" replace />} />
+              <Route path="/viewpost" element={<Posts reportId={reportId} />} />
             </Routes>
           </main>
           {/* <nav className='order-first w-32 p-0 bg-black'></nav>
