@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { fetchAllReports } from '../api/api';
 
-const ExpiredReports = ({ setReportId }) => {
+const OpenReports = (setReportId) => {
   const [reports, setReports] = useState([]);
 
   useEffect(() => {
@@ -13,7 +12,6 @@ const ExpiredReports = ({ setReportId }) => {
     try {
       const report = await fetchAllReports();
       setReports(report);
-      console.log(report);
     } catch (error) {
       console.error('error in fetchReports', error);
     }
@@ -60,30 +58,30 @@ const ExpiredReports = ({ setReportId }) => {
                         <p className="text-xs">Report ID: {report.id}</p>
                       </div>
                       {/* <div className="flex items-center gap-4 mt-5">
-                        <p>description:</p>
-                        <p className="mt-1 text-sm  text-gray-200">{report.description}</p>
-                      </div> */}
+                      <p>description:</p>
+                      <p className="mt-1 text-sm  text-gray-200">{report.description}</p>
+                    </div> */}
                     </div>
                     {/* comments */}
                     {/* <div className='p-2'>
-                      <div className="my-1 flex items-center gap-1 before:h-px before:flex-1 before:bg-gray-300  before:content-[''] after:h-px after:flex-1 after:bg-gray-300  after:content-['']">
-                        Comments
-                      </div>
-                      {report.comments.map((comment) => {
-                        return (
-                          <div key={comment.id} className='p-1'>
-                            <p className='m-1 text-gray-700'>{comment.content}</p>
-                          </div>
-                        );
-                      })}
+                    <div className="my-1 flex items-center gap-1 before:h-px before:flex-1 before:bg-gray-300  before:content-[''] after:h-px after:flex-1 after:bg-gray-300  after:content-['']">
+                      Comments
                     </div>
-                    <div className='p-2'>
-                      <Link to='/addcomment'>
-                        <button onClick={() => getReportId(report.id)} className='my-1 text-pink-500'>
-                          <span className='font-bold'>Reply to thread</span>
-                        </button>
-                      </Link>
-                    </div> */}
+                    {report.comments.map((comment) => {
+                      return (
+                        <div key={comment.id} className='p-1'>
+                          <p className='m-1 text-gray-700'>{comment.content}</p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <div className='p-2'>
+                    <Link to='/addcomment'>
+                      <button onClick={() => getReportId(report.id)} className='my-1 text-pink-500'>
+                        <span className='font-bold'>Reply to thread</span>
+                      </button>
+                    </Link>
+                  </div> */}
                   </div>
                 </div>
               )}
@@ -95,4 +93,4 @@ const ExpiredReports = ({ setReportId }) => {
   );
 };
 
-export default ExpiredReports;
+export default OpenReports;

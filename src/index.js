@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import { Main, Navbar, AddReport, AddComment, ExpiredReports } from './components';
 import './global.css';
 import Posts from './components/Posts';
+import OpenReports from './components/OpenReports';
 
 const App = () => {
   const [reportId, setReportId] = useState('');
@@ -16,11 +17,12 @@ const App = () => {
         <div className="flex flex-row flex-1">
           <main className="flex-1 px-5 bg-black">
             <Routes>
-              <Route path="/openreports" element={<Main setReportId={setReportId} />} />
+              <Route path="/reports" element={<Main setReportId={setReportId} />} />
+              <Route path="/openreports" element={<OpenReports setReportId={setReportId} />} />
               <Route path="/addreport" element={<AddReport />} />
               <Route path="/addcomment" element={<AddComment reportId={reportId} />} />
               <Route path="/closedreports" element={<ExpiredReports setReportId={setReportId} />} />
-              <Route path="*" element={<Navigate to="/openreports" replace />} />
+              <Route path="*" element={<Navigate to="/reports" replace />} />
               <Route path="/viewpost" element={<Posts reportId={reportId} setReportId={setReportId} />} />
             </Routes>
           </main>

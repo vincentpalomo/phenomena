@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <div className="flex items-center justify-between h-32 mx-auto sm:px-6 lg:px-5">
       <div className="flex items-center">
-        <Link to="/openreports">
+        <Link to="/reports">
           <span className="font-pilowlava text-[128px] text-white">phenomena</span>
         </Link>
       </div>
@@ -14,7 +14,7 @@ const NavBar = () => {
         <Link to="/" className="active:text-green-400">
           <button className="text-[14px] tracking-[4px] hover:text-green-400 focus:text-green-400">about</button>
         </Link>
-        <Link to="/openreports" className="active:text-green-400">
+        <Link to="/reports" className="active:text-green-400">
           <button className="text-[14px] tracking-[4px] hover:text-green-400 focus:text-green-400">experiences</button>
         </Link>
         <Link to="addreport">

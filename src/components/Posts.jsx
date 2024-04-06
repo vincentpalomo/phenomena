@@ -51,7 +51,7 @@ const Posts = ({ reportId, setReportId }) => {
         {report.comments &&
           report.comments.map((comment) => {
             return (
-              <div key={comment.id} className="flex justify-between border-b-2 pl-4">
+              <div key={comment.id} className="flex justify-between border-b-2 pl-4 mb-5">
                 <p className="w-[70vw]">{comment.content}</p>
                 <p className="text-xs">comment id: {comment.id}</p>
               </div>
