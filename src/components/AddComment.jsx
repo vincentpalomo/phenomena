@@ -19,14 +19,14 @@ const AddComment = ({ reportId }) => {
   };
 
   return (
-    <div className='mb-2 py-16'>
-      <div className='max-w-screen-xl mx-auto text-center font-robotomono lowercase tracking-[3px]'>
+    <div className='flex justify-center items-center w-full h-full'>
+      <div className='text-center font-robotomono lowercase tracking-[3px]'>
         {/* <h1 className='text-2xl font-bold text-white sm:text-3xl'>Got an experience for yourself?</h1> */}
 
         {/* <p className='mt-4'>Tell us what similiar experiences you have encountered with the paranormal</p> */}
       </div>
 
-      <form onSubmit={createReply} className='max-w-md mx-auto mt-8 mb-0 space-y-4'>
+      <form onSubmit={createReply} className='max-w-xl mx-auto mt-8 mb-0 space-y-4'>
         <div>
           <label htmlFor='content' className='sr-only'>
             Content
@@ -45,7 +45,7 @@ const AddComment = ({ reportId }) => {
         </div>
 
         <div className='flex items-center justify-between'>
-          <p className='font-robotomono lowercase tracking-[3px] text-lg animate-pulse blur-[1px]'>Replies are anonymous</p>
+          <p className='font-robotomono lowercase tracking-[3px] text-lg animate-pulse blur-[1px] pr-5'>Replies are anonymous</p>
 
           <button
             type='submit'

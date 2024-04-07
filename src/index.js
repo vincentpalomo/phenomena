@@ -13,11 +13,11 @@ const App = () => {
   return (
     <>
       <div className='flex flex-col min-h-screen'>
-        <header className=' text-white bg-black'>
+        <header className=' text-white bg-black h-[20vh]'>
           <Navbar />
           <SubLinks />
         </header>
-        <div className='flex flex-row flex-1'>
+        <div className='flex flex-row flex-1 h-[80hv]'>
           <main className='flex-1 px-5 bg-black'>
             <Routes>
               <Route path='/reports' element={<Main setReportId={setReportId} />} />
