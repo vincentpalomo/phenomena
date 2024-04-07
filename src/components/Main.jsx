@@ -21,6 +21,7 @@ const Main = ({ setReportId }) => {
   };
 
   const getReportId = async (reportId) => {
+    localStorage.setItem('reportId', reportId);
     setReportId(reportId);
   };
 
