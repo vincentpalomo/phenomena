@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
-    <div className="sm:h-[70vh] flex flex-col gap-5 justify-start sm:w-1/2 sm:px-10 font-robotomono sm:tracking-[3px] tracking-[2px] leading-4 text-sm py-10 lowercase">
+    <div className="sm:h-[70vh] flex flex-col gap-5 justify-start sm:w-1/2 sm:px-10 px-2 font-robotomono sm:tracking-[3px] tracking-[2px] sm:leading-5 leading-4 text-sm py-10 lowercase">
       <p>
         <span className="sm:text-2xl text-xl text-white">Welcome to Phenomena</span>, the premier platform for sharing
         anonymous paranormal experiences. Have you encountered something inexplicable, witnessed a ghostly apparition,

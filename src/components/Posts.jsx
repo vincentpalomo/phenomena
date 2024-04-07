@@ -69,7 +69,7 @@ const Posts = ({ reportId, setReportId }) => {
           {/* <Link to='/reports' className='tracking-[4px] font-robotomono text-sm hover:text-green-500'>
             back
           </Link> */}
-          <div className="h-[75vh] flex flex-col justify-start lowercase">
+          <div className="sm:h-[75vh] flex flex-col justify-start lowercase">
             <div className="flex sm:justify-between font-robotomono text-xs sm:tracking-[4px] tracking-[2px] border-b border-b-white">
               <div className="py-2 sm:px-1 w-[65%]">
                 <div className="sm:text-5xl text-lg font-medium text-white font-robotomono sm:tracking-[3px] tracking-[2px] leading-4 pb-2">
@@ -123,9 +123,9 @@ const Posts = ({ reportId, setReportId }) => {
               {report.comments && report.comments.length > 0 ? (
                 report.comments.map((comment) => {
                   return (
-                    <div key={comment.id} className="flex justify-between  sm:pl-10 mb-5">
-                      <p className="sm:w-[70vw]">{comment.content}</p>
-                      <p className="text-xs">comment id: {comment.id}</p>
+                    <div key={comment.id} className="flex justify-between sm:pl-10 mb-5">
+                      <p className="sm:w-[70vw] w-[75%] text-xs sm:text-sm">{comment.content}</p>
+                      <p className="text-xs tracking-[2px] sm:text-sm">id: {comment.id}</p>
                     </div>
                   );
                 })
