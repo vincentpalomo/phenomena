@@ -26,7 +26,7 @@ const App = () => {
               <Route path='/addcomment' element={<AddComment reportId={reportId} />} />
               <Route path='/closedreports' element={<ExpiredReports setReportId={setReportId} />} />
               <Route path='*' element={<Navigate to='/reports' replace />} />
-              <Route path='/viewpost' element={<Posts reportId={reportId} setReportId={setReportId} />} />
+              <Route path={`/report/:reportId`} element={<Posts reportId={reportId} setReportId={setReportId} />} />
               <Route path='/about' element={<About />} />
             </Routes>
           </main>
