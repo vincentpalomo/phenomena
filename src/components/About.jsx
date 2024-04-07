@@ -3,29 +3,26 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
-    <div className="h-full flex flex-col gap-5 justify-start w-1/2 px-10 font-robotomono tracking-[3px] text-sm py-20">
+    <div className='h-[70vh] flex flex-col gap-5 justify-start w-1/2 px-10 font-robotomono tracking-[3px] text-sm py-10 lowercase'>
       <p>
-        <span className="text-2xl text-white">Welcome to Phenomena</span>, a platform where you can share your
-        experiences, observations, and thoughts anonymously. We understand that sometimes, there are things we want to
-        discuss or share without revealing our identities. Phenomena provides a safe and confidential space for you to
-        do just that.
+        <span className='text-2xl text-white'>Welcome to Phenomena</span>, the premier platform for sharing anonymous paranormal experiences. Have you
+        encountered something inexplicable, witnessed a ghostly apparition, or experienced a chilling encounter with the unknown? Phenomena is the
+        place to share your stories without fear or judgment..
       </p>
       <p>
-        Our platform is designed to encourage open dialogue and foster a sense of community, all while respecting your
-        privacy. When you post on Phenomena, your submission will only be visible for 24 hours before it expires. This
-        temporary nature ensures that discussions remain fresh and spontaneous, while also protecting your anonymity.
+        Our unique platform allows you to anonymously post your paranormal reports, knowing that your identity will remain protected. Each submission
+        will expire within 24 hours, ensuring that discussions remain current and spontaneous while safeguarding your anonymity.
       </p>
+      {/* <p>
+        Whether you want to share a personal story, discuss a societal issue, or simply ask for advice, Phenomena is here for you. Engage with other
+        users by responding anonymously to their posts, offering support, sharing similar experiences, or providing valuable insights.
+      </p> */}
       <p>
-        Whether you want to share a personal story, discuss a societal issue, or simply ask for advice, Phenomena is
-        here for you. Engage with other users by responding anonymously to their posts, offering support, sharing
-        similar experiences, or providing valuable insights.
-      </p>
-      <p>
-        Join us on Phenomena and be part of an anonymous community where your voice matters. Start sharing, connecting,
-        and exploring the diverse range of experiences that make up our world.
+        Join our community of believers, skeptics, and curious minds as we delve into the mysteries of the supernatural. Engage with other users by
+        responding anonymously to their posts, sharing similar encounters, offering insights, or simply providing support.
       </p>
 
-      <Link to="/reports" className="hover:text-black hover:bg-white border-2 w-fit p-5 rounded-2xl">
+      <Link to='/reports' className='hover:text-black hover:bg-white border-2 w-fit p-4 rounded-2xl'>
         view reports
       </Link>
     </div>
