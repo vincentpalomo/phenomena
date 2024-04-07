@@ -6,23 +6,61 @@ const Posts = ({ reportId, setReportId }) => {
   const [report, setReport] = useState(null);
 
   useEffect(() => {
-    setTimeout(() => {
+    const storedReportId = localStorage.getItem('reportId');
+    if (storedReportId) {
+      setReportId(storedReportId);
+    }
+  }, [setReportId]);
+
+  useEffect(() => {
+    if (reportId) {
       reportDetails();
-    }, 100);
-  }, []);
+    }
+  }, [reportId]);
 
   const reportDetails = async () => {
     try {
-      const report = await fetchReport(reportId);
-      setReport(report);
+      const fetchedReport = await fetchReport(reportId);
+      setReport(fetchedReport);
     } catch (error) {
       console.error('error in fetchReport', error);
     }
   };
 
-  const getReportId = async (reportId) => {
+  const getReportId = (reportId) => {
     setReportId(reportId);
   };
+
+  // useEffect(() => {
+  //   const storedReportId = localStorage.getItem('reportId');
+  //   if (storedReportId) {
+  //     console.log(storedReportId);
+  //     getReportId(storedReportId);
+  //   }
+
+  //   setTimeout(() => {
+  //     reportDetails();
+  //   }, 100);
+  // }, []);
+
+  // useEffect(() => {
+  //   if (reportId) {
+  //     localStorage.setItem('reportId', reportId);
+  //   }
+  // }, [reportId]);
+
+  // const reportDetails = async () => {
+  //   try {
+  //     const report = await fetchReport(reportId);
+  //     setReport(report);
+  //   } catch (error) {
+  //     console.error('error in fetchReport', error);
+  //   }
+  // };
+
+  // const getReportId = async (reportId) => {
+  //   setReportId(reportId);
+  // };
 
   return (
     <>
