@@ -5,6 +5,7 @@ import { Main, Navbar, AddReport, AddComment, ExpiredReports } from './component
 import './global.css';
 import Posts from './components/Posts';
 import OpenReports from './components/OpenReports';
+import About from './components/About';
 
 const App = () => {
   const [reportId, setReportId] = useState('');
@@ -24,6 +25,7 @@ const App = () => {
               <Route path="/closedreports" element={<ExpiredReports setReportId={setReportId} />} />
               <Route path="*" element={<Navigate to="/reports" replace />} />
               <Route path="/viewpost" element={<Posts reportId={reportId} setReportId={setReportId} />} />
+              <Route path="/about" element={<About />} />
             </Routes>
           </main>
           {/* <nav className='order-first w-32 p-0 bg-black'></nav>

@@ -11,7 +11,7 @@ const NavBar = () => {
       </div>
 
       <div className="font-robotomono flex flex-col justify-center items-end text-[14px] tracking-[4px]">
-        <Link to="/" className="active:text-green-400">
+        <Link to="/about" className="active:text-green-400">
           <button className="text-[14px] tracking-[4px] hover:text-green-400 focus:text-green-400">about</button>
         </Link>
         <Link to="/reports" className="active:text-green-400">
