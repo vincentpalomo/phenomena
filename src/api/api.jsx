@@ -1,4 +1,8 @@
-export const APIURL = 'https://phenomena-gmx2.onrender.com/api';
+/* render node server */
+// export const APIURL = 'https://phenomena-gmx2.onrender.com/api';
+
+/* local node server */
+export const APIURL = 'http://localhost:3000/api/';
 
 // fetch all reports
 export const fetchAllReports = async () => {

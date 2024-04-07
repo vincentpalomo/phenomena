@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { fetchAllReports } from '../api/api';
 
 const OpenReports = (setReportId) => {
   const [reports, setReports] = useState([]);
@@ -38,7 +39,7 @@ const OpenReports = (setReportId) => {
         {reports.map((report) => {
           return (
             <div key={report.id}>
-              {report.isExpired && (
+              {!report.isExpired && (
                 <div className="border-b-2 mb-2 h-[10vh]">
                   <div className="rounded-[10px] bg-black p-4 sm:p-2 h-full">
                     {/* report body */}
@@ -51,7 +52,9 @@ const OpenReports = (setReportId) => {
                         >
                           {report.title}
                         </Link>
-                        <div className="text-xs text-red-500">{report.isExpired && <div>Expired</div>}</div>
+                        <div className="text-xs text-red-500">
+                          {report.isExpired ? <div>Closed</div> : <div className="text-green-500">Open</div>}
+                        </div>
                       </div>
                       <div className="flex justify-between items-center">
                         <p className="text-xs text-gray-500">{report.location}</p>

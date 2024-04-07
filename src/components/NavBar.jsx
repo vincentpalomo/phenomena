@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <div className="flex items-center justify-between h-32 mx-auto sm:px-6 lg:px-5">
+    <div className="flex items-center justify-between h-32 mx-auto sm:px-6 lg:px-4">
       <div className="flex items-center">
         <Link to="/reports">
           <span className="font-pilowlava text-[128px] text-white">phenomena</span>

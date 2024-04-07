@@ -20,7 +20,7 @@ const AddReport = () => {
     try {
       const createReport = await fetchCreateReport(title, location, description, password);
       console.log(createReport);
-      history('/openreports');
+      history('/reports');
     } catch (error) {
       console.error('error at fetch createReport', error);
     }

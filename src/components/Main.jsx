@@ -52,7 +52,9 @@ const Main = ({ setReportId }) => {
                         >
                           {report.title}
                         </Link>
-                        <div className="text-xs text-red-500">{report.isExpired && <div>Expired</div>}</div>
+                        <div className="text-xs text-red-500">
+                          {report.isExpired ? <div>Closed</div> : <div className="text-green-500">Open</div>}
+                        </div>
                       </div>
                       <div className="flex justify-between items-center">
                         <p className="text-xs text-gray-500">{report.location}</p>
