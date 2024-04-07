@@ -72,7 +72,7 @@ const Posts = ({ reportId, setReportId }) => {
           <div className="h-[75vh] flex flex-col justify-start lowercase">
             <div className="flex sm:justify-between font-robotomono text-xs sm:tracking-[4px] tracking-[2px] border-b border-b-white">
               <div className="py-2 sm:px-1 w-[65%]">
-                <div className="sm:text-5xl text-lg font-medium font-robotomono sm:tracking-[3px] tracking-[2px] leading-4 pb-2">
+                <div className="sm:text-5xl text-lg font-medium text-white font-robotomono sm:tracking-[3px] tracking-[2px] leading-4 pb-2">
                   {report?.title}
                 </div>
               </div>
