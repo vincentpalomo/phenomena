@@ -65,43 +65,46 @@ const Posts = ({ reportId, setReportId }) => {
   return (
     <>
       {report ? (
-        <div>
+        <div className="">
           {/* <Link to='/reports' className='tracking-[4px] font-robotomono text-sm hover:text-green-500'>
             back
           </Link> */}
-          <div className='h-[75vh] flex flex-col justify-start lowercase'>
-            <div className='flex justify-between font-robotomono text-xs tracking-[4px] border-b border-b-white'>
-              <div className='py-2 px-1'>
-                <div className='text-5xl font-robotomono tracking-[3px] pb-2'>{report?.title}</div>
-                {/* <div className='ml-10'>{report?.location}</div> */}
+          <div className="h-[75vh] flex flex-col justify-start lowercase">
+            <div className="flex sm:justify-between font-robotomono text-xs sm:tracking-[4px] tracking-[2px] border-b border-b-white">
+              <div className="py-2 sm:px-1 w-[65%]">
+                <div className="sm:text-5xl text-lg font-medium font-robotomono sm:tracking-[3px] tracking-[2px] leading-4 pb-2">
+                  {report?.title}
+                </div>
               </div>
-              <div className='flex flex-col justify-end items-end pb-2 w-[20vw]'>
-                <div className='pb-2'>
+              <div className="flex flex-col justify-end items-end pb-2 sm:w-[20vw]">
+                <div className="pb-2">
                   {report?.isExpired ? (
-                    <div className='text-red-500 font-robotomono text-xs tracking-[4px]'>closed</div>
+                    <div className="text-red-500 font-robotomono text-xs sm:tracking-[4px] tracking-[2px]">closed</div>
                   ) : (
-                    <div className='text-green-500 font-robotomono text-xs tracking-[4px]'>open</div>
+                    <div className="text-green-500 font-robotomono text-xs sm:tracking-[4px] tracking-[2px]">open</div>
                   )}
                 </div>
                 <div>report id: {report?.id}</div>
               </div>
             </div>
 
-            <div className='px-10 relative flex justify-start items-center h-[20vh] border-b'>
-              <div className='absolute top-1 right-0 font-robotomono tracking-[4px] text-xs'>{report.location}</div>
+            <div className="sm:px-10 relative flex justify-start items-center h-[20vh] border-b">
+              <div className="absolute top-1 sm:right-0 right-6 font-robotomono tracking-[4px] text-xs">
+                {report.location}
+              </div>
               {/* <p className="font-robotomono text-sm tracking-[4px]">description:</p> */}
-              <div className='font-robotomono text-sm tracking-[4px]'> {report?.description}</div>
+              <div className="font-robotomono text-sm tracking-[4px]"> {report?.description}</div>
             </div>
 
-            <div className='font-robotomono tracking-[4px] text-sm'>
-              <div className='flex justify-between my-5'>
-                <p className='pb-2'>Comments:</p>
+            <div className="font-robotomono tracking-[4px] text-sm">
+              <div className="flex justify-between my-5">
+                <p className="pb-2">Comments:</p>
                 <div>
                   {!report?.isExpired && (
                     <Link
-                      to='/addcomment'
+                      to="/addcomment"
                       onClick={() => getReportId(report.id)}
-                      className='text-xs text-center hover:text-black hover:bg-white border rounded-lg p-2'
+                      className="text-xs text-center hover:text-black hover:bg-white border rounded-lg p-2"
                     >
                       reply
                     </Link>
@@ -120,20 +123,22 @@ const Posts = ({ reportId, setReportId }) => {
               {report.comments && report.comments.length > 0 ? (
                 report.comments.map((comment) => {
                   return (
-                    <div key={comment.id} className='flex justify-between  pl-10 mb-5'>
-                      <p className='w-[70vw]'>{comment.content}</p>
-                      <p className='text-xs'>comment id: {comment.id}</p>
+                    <div key={comment.id} className="flex justify-between  sm:pl-10 mb-5">
+                      <p className="sm:w-[70vw]">{comment.content}</p>
+                      <p className="text-xs">comment id: {comment.id}</p>
                     </div>
                   );
                 })
               ) : (
-                <p className='text-center'>No comments</p>
+                <p className="text-center">No comments</p>
               )}
             </div>
           </div>
         </div>
       ) : (
-        <div className='h-full flex justify-center items-center font-robotomono tracking-[4px] animate-pulse'>loading...</div>
+        <div className="h-full flex justify-center items-center font-robotomono tracking-[4px] animate-pulse">
+          loading...
+        </div>
       )}
     </>
   );
