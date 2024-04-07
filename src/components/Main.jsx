@@ -41,7 +41,7 @@ const Main = ({ setReportId }) => {
                             <div className='flex justify-between'>
                               <Link
                                 to='/viewpost'
-                                className='text-xl font-medium text-white hover:text-green-400'
+                                className='text-xl font-medium text-white hover:text-green-400 hover:blur-[.5px]'
                                 onClick={() => getReportId(report.id)}
                               >
                                 {report.title}

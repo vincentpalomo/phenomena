@@ -45,7 +45,7 @@ const AddComment = ({ reportId }) => {
         </div>
 
         <div className='flex items-center justify-between'>
-          <p className='font-robotomono lowercase tracking-[3px] text-sm text-pink-600'>Replies are anonymous</p>
+          <p className='font-robotomono lowercase tracking-[3px] text-lg animate-pulse blur-[1px]'>Replies are anonymous</p>
 
           <button
             type='submit'

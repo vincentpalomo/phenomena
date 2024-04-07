@@ -36,11 +36,11 @@ const AddReport = () => {
             </p>
 
             <div className='mt-8'>
-              <p className='text-2xl font-bold text-white blur-[1px]'>Reports are anonymous and open for 24 hours</p>
+              <p className='text-2xl font-bold text-white blur-[1px] animate-pulse'>Reports are anonymous and open for 24 hours</p>
             </div>
           </div>
 
-          <div className='p-8 bg-neutral-200 rounded-lg shadow-lg lg:col-span-3 lg:p-12'>
+          <div className='p-8 rounded-lg shadow-lg lg:col-span-3 lg:p-12'>
             <form onSubmit={createReport} className='space-y-4'>
               <div>
                 <label className='sr-only' htmlFor='name'>
@@ -105,7 +105,10 @@ const AddReport = () => {
               </div>
 
               <div className='mt-4'>
-                <button type='submit' className='inline-flex items-center justify-center w-full px-5 py-3 text-white bg-black rounded-lg sm:w-auto'>
+                <button
+                  type='submit'
+                  className='inline-flex items-center justify-center w-full px-5 py-3 text-white bg-black border rounded-lg sm:w-auto hover:bg-white hover:text-black'
+                >
                   <span className='font-robotomono lowercase tracking-[4px]'>Send Report</span>
 
                   <svg xmlns='http://www.w3.org/2000/svg' className='w-5 h-5 ml-3' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
