@@ -14,6 +14,7 @@ const Posts = ({ reportId, setReportId }) => {
 
   useEffect(() => {
     if (reportId) {
+      localStorage.setItem('reportId', reportId);
       reportDetails();
     }
   }, [reportId]);
