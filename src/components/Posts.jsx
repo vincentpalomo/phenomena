@@ -88,7 +88,7 @@ const Posts = ({ reportId, setReportId }) => {
             </div>
 
             <div className='px-10 relative flex justify-start items-center h-[20vh] border-b'>
-              <div className='absolute top-0 right-0 font-robotomono tracking-[4px] text-xs'>{report.location}</div>
+              <div className='absolute top-1 right-0 font-robotomono tracking-[4px] text-xs'>{report.location}</div>
               {/* <p className="font-robotomono text-sm tracking-[4px]">description:</p> */}
               <div className='font-robotomono text-sm tracking-[4px]'> {report?.description}</div>
             </div>
