@@ -18,7 +18,7 @@ const App = () => {
           <SubLinks />
         </header>
         <div className="flex flex-row flex-1 h-[80hv]">
-          <main className="flex-1 px-5 bg-black">
+          <main className="flex-1 sm:px-5 px-2 bg-black">
             <Routes>
               <Route path="/reports" element={<Main setReportId={setReportId} />} />
               <Route path="/openreports" element={<OpenReports setReportId={setReportId} />} />
