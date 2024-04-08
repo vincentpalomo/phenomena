@@ -2,11 +2,7 @@
 
 This repository contains the frontend code for the Phenomena project.
 
-<<<<<<< HEAD
 ## Frontend Netlify URL
-=======
-frontend netlify url: https://phenomena-reports.netlify.app
->>>>>>> 5601544a8766c5c1aba734ca5a2cad2b0d3c9748
 
 [Phenomena Reports](https://phenomena-reports.netlify.app)
 
