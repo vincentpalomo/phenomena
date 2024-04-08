@@ -30,21 +30,17 @@ The backend is built with Node.js and Express.js, hosted on Render, providing th
 
 ## Database
 
-The database for Phenomena is hosted on bit.io and stores all reported data.
+The database for Phenomena is hosted on xata.io and stores all reported data.
 
-### SQL Database Bit.io
+### SQL Database xata.io
 
-[Phenomena SQL Database](https://bit.io/vincentpalomo/phenomena)
-
-## Additional Resources
-
-- [Phenomena Xata](https://Vincent-s-workspace-58b3k1.us-east-1.xata.sh/db/phenomena:main) - Explore additional data related to Phenomena.
+[Phenomena Xata SQL Database](https://Vincent-s-workspace-58b3k1.us-east-1.xata.sh/db/phenomena:main)
 
 ## Technology Stack
 
 - **Frontend**: React, Tailwind CSS
 - **Backend**: Node.js (Express)
-- **Database**: SQL (Bit.io)
+- **Database**: SQL (xata.io)
 - **Hosting**: Netlify (Frontend), Render (Backend)
 
 ## Getting Started
