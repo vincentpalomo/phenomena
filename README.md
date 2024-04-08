@@ -1,13 +1,23 @@
-# phenomena
+# Phenomena Project
 
-simple frontend for phenomena project
+This repository contains the frontend code for the Phenomena project.
 
-frontend netlify url: https://phenomena-vp-fsa.netlify.app
+## Frontend Netlify URL
 
-api backend render url: https://phenomena-gmx2.onrender.com/api/reports
+[Phenomena Reports](https://phenomena-reports.netlify.app)
 
-SQL database bit.io: https://bit.io/vincentpalomo/phenomena
+## API Backend Render URL
 
-Github backend url: https://github.com/vincentpalomo/UNIV_Phenomena_Starter
+[Phenomena API Reports](https://phenomena-gmx2.onrender.com/api/reports)
 
-xata: https://Vincent-s-workspace-58b3k1.us-east-1.xata.sh/db/phenomena:main
+## SQL Database Bit.io
+
+[Phenomena SQL Database](https://bit.io/vincentpalomo/phenomena)
+
+## Github Backend Repository URL
+
+[UNIV Phenomena Starter](https://github.com/vincentpalomo/UNIV_Phenomena_Starter)
+
+## Xata
+
+[Phenomena Xata](https://Vincent-s-workspace-58b3k1.us-east-1.xata.sh/db/phenomena:main)
