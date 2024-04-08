@@ -26,7 +26,7 @@ The backend is built with Node.js and Express.js, hosted on Render, providing th
 
 ### GitHub Backend Repository URL
 
-[UNIV Phenomena Starter](https://github.com/vincentpalomo/UNIV_Phenomena_Starter)
+[Phenomena Backend](https://github.com/vincentpalomo/UNIV_Phenomena_Starter)
 
 ## Database
 
