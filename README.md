@@ -21,3 +21,9 @@ This repository contains the frontend code for the Phenomena project.
 ## Xata
 
 [Phenomena Xata](https://Vincent-s-workspace-58b3k1.us-east-1.xata.sh/db/phenomena:main)
+
+## Technology Used
+
+- React
+- Tailwind CSS
+- Netlify for live hosting
