@@ -25,42 +25,53 @@ const OpenReports = ({ setReportId }) => {
     setReportId(reportId);
   };
 
+  console.log(reports);
+
   return (
     <>
       <div>
         {reports ? (
           <div>
-            {reports.map((report) => {
-              return (
-                <div key={report.id}>
-                  {!report.isExpired && (
-                    <div className="border-b-2 mb-2 h-[10vh]">
-                      <div className="rounded-[10px] bg-black p-1 sm:p-2 h-full">
-                        {/* report body */}
-                        <div className="p-1 font-robotomono lowercase sm:tracking-[4px] tracking-[2px] leading-4 flex flex-col justify-center h-full">
-                          <div className="flex justify-between">
-                            <Link
-                              to={`/report/${report.id}`}
-                              className="sm:text-xl font-medium text-white hover:text-green-400"
-                              onClick={() => getReportId(report.id)}
-                            >
-                              {report.title}
-                            </Link>
-                            <div className="text-xs text-red-500">
-                              {report.isExpired ? <div>Closed</div> : <div className="text-green-500">Open</div>}
+            {reports.isExpired ? (
+              reports.map((report) => {
+                return (
+                  <div key={report.id}>
+                    {!report.isExpired && (
+                      <div className="border-b-2 mb-2 h-[10vh]">
+                        <div className="rounded-[10px] bg-black p-1 sm:p-2 h-full">
+                          {/* report body */}
+                          <div className="p-1 font-robotomono lowercase sm:tracking-[4px] tracking-[2px] leading-4 flex flex-col justify-center h-full">
+                            <div className="flex justify-between">
+                              <Link
+                                to={`/report/${report.id}`}
+                                className="sm:text-xl font-medium text-white hover:text-green-400"
+                                onClick={() => getReportId(report.id)}
+                              >
+                                {report.title}
+                              </Link>
+                              <div className="text-xs text-red-500">
+                                {report.isExpired ? <div>Closed</div> : <div className="text-green-500">Open</div>}
+                              </div>
                             </div>
-                          </div>
-                          <div className="flex justify-between items-center">
-                            <p className="text-xs text-gray-500">{report.location}</p>
-                            <p className="text-xs">Report ID: {report.id}</p>
+                            <div className="flex justify-between items-center">
+                              <p className="text-xs text-gray-500">{report.location}</p>
+                              <p className="text-xs">Report ID: {report.id}</p>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  )}
-                </div>
-              );
-            })}
+                    )}
+                  </div>
+                );
+              })
+            ) : (
+              <div className="h-[70vh] flex justify-center items-center font-robotomono tracking-[4px] text-sm">
+                no open reports
+                {/* <button className="hover:bg-white hover:text-black border border-neutral-100 font-bold py-2 px-4 rounded">
+                  add report
+                </button> */}
+              </div>
+            )}
           </div>
         ) : (
           <div className="h-[70vh] flex justify-center items-center font-robotomono tracking-[4px] animate-pulse">
