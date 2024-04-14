@@ -32,7 +32,7 @@ const OpenReports = ({ setReportId }) => {
       <div>
         {reports ? (
           <div>
-            {reports.isExpired ? (
+            {reports.length > 0 ? (
               reports.map((report) => {
                 return (
                   <div key={report.id}>
@@ -65,10 +65,10 @@ const OpenReports = ({ setReportId }) => {
                 );
               })
             ) : (
-              <div className="h-[70vh] flex justify-center items-center font-robotomono tracking-[4px] text-sm">
+              <div className="h-[70vh] flex justify-center items-center font-robotomono tracking-[4px]">
                 no open reports
-                {/* <button className="hover:bg-white hover:text-black border border-neutral-100 font-bold py-2 px-4 rounded">
-                  add report
+                {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  Add Post
                 </button> */}
               </div>
             )}

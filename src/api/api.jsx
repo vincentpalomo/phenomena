@@ -10,6 +10,7 @@ export const fetchAllReports = async () => {
   const json = await res.json();
   return json.reports;
 };
+
 export const fetchReport = async (reportId) => {
   const res = await fetch(`${APIURL}/reports/${reportId}`);
   const json = await res.json();
