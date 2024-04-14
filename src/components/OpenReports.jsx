@@ -25,8 +25,6 @@ const OpenReports = ({ setReportId }) => {
     setReportId(reportId);
   };
 
-  console.log(reports);
-
   return (
     <>
       <div>
