@@ -88,7 +88,7 @@ const Posts = ({ reportId, setReportId }) => {
               </div>
             </div>
 
-            <div className="sm:px-10 relative flex justify-start items-center h-[20vh] border-b">
+            <div className="sm:px-10 relative flex justify-start items-center h-[25vh] border-b">
               <div className="absolute top-1 sm:right-0 right-6 font-robotomono tracking-[4px] text-xs">
                 {report.location}
               </div>
