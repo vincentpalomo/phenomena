@@ -118,8 +118,12 @@ const OpenReports = ({ setReportId }) => {
                 );
               })
             ) : (
-              <div className="h-[70vh] flex justify-center items-center font-robotomono tracking-[4px]">
-                no open reports
+              <div className="h-[70vh] flex flex-col justify-center items-center font-robotomono tracking-[4px]">
+                <span>no open reports</span>
+                <span className="my-5 text-center">do you have an experience you'd like to share?</span>
+                <Link to={`/addreport`} className="border-2 rounded-2xl p-4 hover:text-black hover:bg-white">
+                  add report
+                </Link>
               </div>
             )}
           </div>
