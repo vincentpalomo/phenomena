@@ -2,7 +2,7 @@
 // export const APIURL = 'https://phenomena-gmx2.onrender.com/api';
 
 /* coolify node server */
-export const APIURL = 'https://phenomena-db.lucidstudio.xyz/api';
+export const APIURL = 'https://phenomena-db.vincentpalomo.dev/api';
 
 /* local node server */
 // export const APIURL = 'http://localhost:3000/api/';
