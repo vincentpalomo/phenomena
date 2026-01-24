@@ -81,7 +81,7 @@ const AddReport = () => {
                   </label>
                   <input
                     className="w-full p-3 text-sm border-gray-200 rounded-lg font-robotomono lowercase tracking-[4px]"
-                    placeholder="Password"
+                    placeholder="What is 10 + 2?"
                     type="password"
                     id="text"
                     value={password}
