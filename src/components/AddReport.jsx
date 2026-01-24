@@ -77,7 +77,7 @@ const AddReport = () => {
 
                 <div>
                   <label className="sr-only" htmlFor="phone">
-                    Password
+                    What is 10 + 2?
                   </label>
                   <input
                     className="w-full p-3 text-sm border-gray-200 rounded-lg font-robotomono lowercase tracking-[4px]"
